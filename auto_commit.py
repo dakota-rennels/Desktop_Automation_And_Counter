@@ -20,7 +20,7 @@ def commit_and_push():
         f.truncate()
 
     os.system(f'cd {REPO_PATH} && git add counter.txt')
-    os.system(f'cd {REPO_PATH} && git commit -m \"Update counter to {new_value}\"')
+    os.system(f'cd {REPO_PATH} && git commit -m \"Update file with new code and new value: {new_value}\"')
     os.system(f'cd {REPO_PATH} && git push')
 
 def schedule_daily_commits():
@@ -39,4 +39,3 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(1)
-
